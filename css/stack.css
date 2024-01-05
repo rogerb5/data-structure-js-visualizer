@@ -106,6 +106,7 @@ input[type="text"] {
     color: var(--primary-text-color);
     padding: 0.3rem 1rem 0.3rem 1rem;
     font-size: 1rem;
+    margin-top: 1rem;
 }
 
 input[type="text"]:hover {
