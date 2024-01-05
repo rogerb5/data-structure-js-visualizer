@@ -1,7 +1,4 @@
 class MaxHeapUI {
-    constructor() {
-    }
-
     highlightFamily(index) {
         const parentNode = document.querySelectorAll('.node')[index];
         const leftChildIndex = this.getLeftChildIndex(index);
@@ -232,4 +229,4 @@ class MaxHeap extends MaxHeapUI {
     }
 }
 
-export { MaxHeapUI, MaxHeap }; // export MaxHeapUI, and MaxHeap
+export { MaxHeapUI, MaxHeap }; 

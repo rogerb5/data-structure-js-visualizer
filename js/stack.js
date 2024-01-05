@@ -3,7 +3,6 @@ const stackIsEmptyP = document.querySelector('p.isempty');
 const stackPeekP = document.querySelector('p.peek');
 const stackContainer = document.querySelector('article.stack');
 
-
 class Stack {
     constructor() {
         this.items = [];
@@ -29,8 +28,6 @@ class Stack {
         stackItem.append(stackVal);
         stackContainer.prepend(stackItem);
         this.items.push({ value, element: stackItem });
-
-
         stackItem.style.animation = 'pushanimation 0.5s';
         if (this.peekedItem) {
             this.peekedItem.element.classList.remove('peekcolor');
