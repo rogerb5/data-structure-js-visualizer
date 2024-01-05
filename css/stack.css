@@ -238,4 +238,35 @@ section.modal p {
     color: #D6D3D1;
 }
 
-@media screen and (max-width: 800px) {}
+@media screen and (max-width: 800px) {
+    div.push-div {
+        display: grid;
+    }
+
+    main.grid {
+        flex-direction: column;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    a#home {
+        display: flex;
+        justify-content: center;
+    }
+
+    main aside.stack-visualizer {
+        width: 100%;
+    }
+
+    div.results-div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section.modal {
+        padding: 1rem;
+    }
+
+}

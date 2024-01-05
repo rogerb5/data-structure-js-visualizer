@@ -303,4 +303,9 @@ section.modal p {
     section.input-section {
         display: grid;
     }
+
+    section.modal {
+        padding: 1rem;
+    }
+
 }

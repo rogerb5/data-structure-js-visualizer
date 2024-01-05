@@ -23,7 +23,8 @@ header {
     display: flex;
     justify-content: center;
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    padding: 1rem;
 }
 
 section.visualizers {
