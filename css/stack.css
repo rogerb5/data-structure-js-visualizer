@@ -96,8 +96,7 @@ aside.methods-info {
 }
 
 div.push-div {
-    justify-content: space-around;
-    gap: 0.7rem;
+    display: grid;
     margin-bottom: 0.3rem;
 }
 
@@ -138,6 +137,7 @@ article.stack {
     align-items: center;
 }
 
+
 div.stack-element {
     margin-top: 0.4rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -164,8 +164,7 @@ button.btn {
     color: var(--primary-text-color);
     border: 2px solid #989796;
     font-size: 1rem;
-    margin-top: 0.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 button.btn-push {
