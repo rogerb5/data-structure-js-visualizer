@@ -1,0 +1,241 @@
+@keyframes popanimation {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate3d(20px, -50px, 0px);
+        opacity: 0;
+    }
+}
+
+@keyframes pushanimation {
+    0% {
+        transform: translate3d(-20px, -50px, 0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    font-family: system-ui;
+}
+
+html {
+    background-color: var(--main-bg-color);
+}
+
+:root {
+    --primary-border-color: lightslategray;
+    --primary-text-color: whitesmoke;
+    --primary-stack-el-color: #292524;
+    --main-bg-color: #171717;
+    --node-border-color: #333;
+    --primary-stack-el-peek-color: rgb(61, 91, 242);
+}
+
+h1,
+h3 {
+    color: var(--primary-text-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #D6D3D1;
+}
+
+a {
+    color: whitesmoke;
+}
+
+article.alert {
+    margin-top: 1rem;
+    background-color: #f5530e7b;
+    border: 1px solid #f1dfd77b;
+    color: whitesmoke;
+    padding: 0.1rem;
+    width: 70%;
+    opacity: 0;
+    transition: opacity 400ms ease;
+}
+
+article.alert.active {
+    opacity: 1;
+}
+
+/***************** Main website Grid ********************/
+main.grid {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-bg-color);
+}
+
+aside.methods-info {
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+}
+
+div.push-div {
+    justify-content: space-around;
+    gap: 0.7rem;
+    margin-bottom: 0.3rem;
+}
+
+input[type="text"] {
+    background-color: var(--main-bg-color);
+    border: 2px solid #333;
+    color: var(--primary-text-color);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    font-size: 1rem;
+}
+
+input[type="text"]:hover {
+    border: 2px solid rgb(148, 147, 147)
+}
+
+div.results-div {
+    background-color: var(--main-bg-color);
+    color: var(--primary-text-color);
+    margin-top: 2rem;
+}
+
+div.results-div p {
+    margin-top: 0.7rem;
+}
+
+main aside.stack-visualizer {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    background-color: var(--main-bg-color);
+    width: 80%;
+}
+
+article.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.stack-element {
+    margin-top: 0.4rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: var(--primary-stack-el-color);
+    color: whitesmoke;
+    border: 2px solid #333;
+    position: relative;
+    text-align: center;
+    transition: transform 300ms ease;
+}
+
+div.stack-element.peekcolor {
+    background-color: var(--primary-stack-el-peek-color);
+}
+
+div.stack-element:hover {
+    transform: translateY(-3px);
+}
+
+/* General Button Styling ****/
+button.btn {
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    background-color: #44403C;
+    color: var(--primary-text-color);
+    border: 2px solid #989796;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+button.btn-push {
+    background-color: rgb(61, 91, 242);
+    border: 2px solid #869fef;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Future span index styling */
+div.stack-element span {
+    background-color: #44403C;
+    color: var(--primary-text-color);
+    position: absolute;
+    padding: 0.2rem;
+    top: 3px;
+    left: -15px;
+}
+
+/************ Modal Styling ************/
+section.modal {
+    background-color: var(--main-bg-color);
+    padding: 3rem;
+    line-height: 1.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+}
+
+section.modal article {
+    border: 2px solid rgb(61, 91, 242);
+    background-color: #333;
+    padding: 1rem;
+}
+
+section.modal article h1 {
+    color: #D6D3D1;
+}
+
+section.modal article h1 {
+    color: #D6D3D1;
+}
+
+button.close-btn,
+button.about-btn {
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    background-color: #44403C;
+    color: #D6D3D1;
+    border: 2px solid #989796;
+    font-size: 1rem;
+}
+
+section.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+section.modal article {
+    margin-bottom: 1rem;
+}
+
+section.modal p {
+    color: #D6D3D1;
+}
+
+@media screen and (max-width: 800px) {}

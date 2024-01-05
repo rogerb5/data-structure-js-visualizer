@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stack Visualizer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/stack.css">
+</head>
+
+<body>
+    <main class="grid">
+        <aside class="methods-info">
+
+            <header>
+                <h1>Stack</h1>
+            </header>
+
+            <a href="index.html">Home Page</a>
+            <section class="method-div">
+                <div class="push-div">
+                    <button class="btn-push btn">Push</button>
+                    <button class="btn-pop btn">Pop</button>
+                    <button class="btn-clear btn">Clear</button>
+                    <button class="about-btn" id="about">About</button>
+                    <input type="text" name="sentence" placeholder="Add Integer Value:">
+                </div>
+            </section>
+
+            <div class="results-div">
+                <p class="size">Size: 0</p>
+                <p class="isempty">IsEmpty? true</p>
+                <p class="peek" id="peek">Peek: NULL</p>
+            </div>
+
+
+            <article class="alert">
+                <p class="alert">Please enter a valid number</p>
+            </article>
+        </aside>
+
+        <aside class="stack-visualizer">
+            <article class="stack"></article>
+        </aside>
+    </main>
+
+    <section class="modal">
+        <article class="about-stack">
+            <h1>A Stack</h1>
+            <p>Is a data structure that adds and removes based on the Last In First [LIFO] principle.
+            <p>
+            <p>
+                Additionally, elements are stored in order of insertion. We do not think of stacks having indexes
+                instead they have a bottom and top.
+            </p>
+            <p>The client can only add, delete, and examine the last element at the top of stack</p>
+            <p>The indexes are shown on the visualizer, but conceptually we think of a stack having a bottom and top.
+            </p>
+        </article>
+
+        <article class="stack-op">
+            <h1>Basic Stack Operations</h1>
+            <p>Push: add element to the top</p>
+            <p>Pop: remove the top element</p>
+            <p>Peek: examine the top element</p>
+        </article>
+
+        <article class="stack-op">
+            <h1>Applications of Stacks in Computer Science</h1>
+            <p>Programming languages and compilers: methods are places on a stack call means push and return is pop
+            </p>
+            <p>Matching up related pair of things: check if a string is a palindrome, convert "infix" expression to
+                pre or postifx</p>
+            <p>Algorithms: search a maze using "backtracking"</p>
+        </article>
+
+        <article class="stack-op">
+            <h1>About the Stack Visualizer</h1>
+            <p>The stack is array based</p>
+        </article>
+
+        <button class="close-btn">Close</button>
+    </section>
+
+    <script type="module" src="js/stack-ui.js"></script>
+</body>
+
+</html>

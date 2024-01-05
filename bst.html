@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Binary Search Tree Visualizer</title>
+    <meta name="description" content="A JavaScript Binary Search Tree Visualizer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bst.css">
+</head>
+
+<body>
+    <header>
+        <h1>Binary Search Tree</h1>
+        <a href="index.html">Home Page</a>
+    </header>
+
+    <!--- Holds all operations -->
+    <nav class="navigation">
+        <article class="add-container">
+            <input type="text" placeholder="Insert Node Value" class="insert-input" required>
+            <button class="insert-btn">Insert Node</button>
+        </article>
+
+        <article class="delete-container">
+            <input type="text" placeholder="Delete Node Value" class="delete-input" required>
+            <button class="delete-btn">Delete Node</button>
+        </article>
+
+        <article class="search-container">
+            <input type="text" placeholder="Search Node" class="search-input">
+            <button class="search-btn">Search Node</button>
+        </article>
+    </nav>
+
+    <section class="button-section">
+        <button class="searchmin-node-btn" id="other">Search Min Node</button>
+        <button class="searchmax-node-btn" id="other">Search Max Node</button>
+        <button class="inorder-node-btn traversal" id="other">Inorder Traversal</button>
+        <button class="postorder-node-btn traversal" id="other">Postorder Traversal</button>
+        <button class="preorder-node-btn traversal" id="other">Preorder Traversal</button>
+        <button class="clear-btn">Clear</button>
+        <button class="about-btn" id="about">About</button>
+    </section>
+
+    <aside>
+        <article class="alert">
+            <p class="aler-p">Please enter a node value</p>
+        </article>
+    </aside>
+
+    <!--BST will be rendered here-->
+    <main class="bst-main">
+        <section class="bst-container" id="none"></section>
+    </main>
+
+    <section class="modal">
+        <article class="about-stack">
+            <h1>A Binary Search Tree</h1>
+            <p>A binary search tree may be empty [null] or have a root node R such that
+            <p>
+            <p>Every element of R's left subtree contains data less than R's data</p>
+            <p>Every Element of R's right subtree contains data greater than R's</p>
+            <p>R's left and right subtrees are also binary search trees.</p>
+            <p>It is an unbalanced tree</p>
+        </article>
+
+        <article class="stack-op">
+            <h1>Binary Search Tree Operations</h1>
+            <p>insert, remove, and contains</p>
+            <p>in-order traversal: left subtree, root, right subtree</p>
+            <p>pre-order traversal: root, left subtree, right subtree</p>
+            <p>post-order traversal: left subtree, right subtree, root</p>
+        </article>
+
+        <article class="stack-op">
+            <h1>Applications of Binary Search Trees in Computer Science</h1>
+            <p>Binary search trees can be utilized in file systems to organize and search for files efficiently. They
+                can help maintain a hierarchical structure based on file names or attributes.</p>
+            <p>BSTs can be used to implement routing tables in computer networks. They allow for efficient lookup of
+                network addresses, helping in the routing of data packets.</p>
+            <p>Balanced versions of binary search trees, like AVL trees and Red-Black trees, are commonly used to
+                maintain balance during insertions and deletions, ensuring efficient search and update operations.</p>
+        </article>
+
+        <article class="about-heap">
+            <h1>About the Binary Search Tree Visualizer</h1>
+            <p>Duplicate values are not allowed, and every node inserted is a leaf.</p>
+            <p>Deletion edge cases:
+                The node to delete is a leaf.
+            </p>
+
+            <p>The node to delete has one child.</p>
+            <p>
+                The node to delete has two children*
+                What should were replace the node to delete with two children? In this example, we choose the greatest
+                value in the left subtree. Alternatively, you can use the smallest value in the right subtree. This is
+                an
+                arbitrary choice.
+            </p>
+        </article>
+        <button class="close-btn">Close</button>
+    </section>
+
+    <script type="module" src="js/bst-ui.js"></script>
+</body>
+
+</html>
